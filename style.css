@@ -1,0 +1,173 @@
+/* 🌑 Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+body {
+  background-color: #1b1a1a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* 🔝 Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.85);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  color: #f44336;
+  font-size: 28px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f44336;
+}
+
+/* 🌄 Hero Section */
+.hero {
+  height: 60vh;
+  background: url('banner.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  color: #f44336;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* 🔍 Search Section */
+.search-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.search-section input,
+.search-section select {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+
+.search-section input {
+  width: 250px;
+}
+
+/* 🎬 Movie Cards */
+.movies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+}
+
+.movie-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #f44336;
+}
+
+/* 🎥 Video Popup */
+.video-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.video-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+}
+
+#closePopup {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#closePopup:hover {
+  color: #f44336;
+}
+
+/* 👣 Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #888;
+  font-size: 14px;
+}
